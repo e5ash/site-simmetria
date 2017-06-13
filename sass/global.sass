@@ -1,0 +1,1198 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+$checkbox-checked-name: 'checkbox-checked'
+$checkbox-checked-x: 113px
+$checkbox-checked-y: 94px
+$checkbox-checked-offset-x: -113px
+$checkbox-checked-offset-y: -94px
+$checkbox-checked-width: 21px
+$checkbox-checked-height: 21px
+$checkbox-checked-total-width: 178px
+$checkbox-checked-total-height: 147px
+$checkbox-checked-image: '../img/sprite.png'
+$checkbox-checked: (113px, 94px, -113px, -94px, 21px, 21px, 178px, 147px, '../img/sprite.png', 'checkbox-checked', )
+$checkbox-default-name: 'checkbox-default'
+$checkbox-default-x: 134px
+$checkbox-default-y: 94px
+$checkbox-default-offset-x: -134px
+$checkbox-default-offset-y: -94px
+$checkbox-default-width: 21px
+$checkbox-default-height: 21px
+$checkbox-default-total-width: 178px
+$checkbox-default-total-height: 147px
+$checkbox-default-image: '../img/sprite.png'
+$checkbox-default: (134px, 94px, -134px, -94px, 21px, 21px, 178px, 147px, '../img/sprite.png', 'checkbox-default', )
+$down-circle-name: 'down-circle'
+$down-circle-x: 0px
+$down-circle-y: 118px
+$down-circle-offset-x: 0px
+$down-circle-offset-y: -118px
+$down-circle-width: 30px
+$down-circle-height: 29px
+$down-circle-total-width: 178px
+$down-circle-total-height: 147px
+$down-circle-image: '../img/sprite.png'
+$down-circle: (0px, 118px, 0px, -118px, 30px, 29px, 178px, 147px, '../img/sprite.png', 'down-circle', )
+$down-name: 'down'
+$down-x: 47px
+$down-y: 118px
+$down-offset-x: -47px
+$down-offset-y: -118px
+$down-width: 17px
+$down-height: 9px
+$down-total-width: 178px
+$down-total-height: 147px
+$down-image: '../img/sprite.png'
+$down: (47px, 118px, -47px, -118px, 17px, 9px, 178px, 147px, '../img/sprite.png', 'down', )
+$glass-black-name: 'glass-black'
+$glass-black-x: 155px
+$glass-black-y: 94px
+$glass-black-offset-x: -155px
+$glass-black-offset-y: -94px
+$glass-black-width: 17px
+$glass-black-height: 15px
+$glass-black-total-width: 178px
+$glass-black-total-height: 147px
+$glass-black-image: '../img/sprite.png'
+$glass-black: (155px, 94px, -155px, -94px, 17px, 15px, 178px, 147px, '../img/sprite.png', 'glass-black', )
+$glass-white-name: 'glass-white'
+$glass-white-x: 30px
+$glass-white-y: 118px
+$glass-white-offset-x: -30px
+$glass-white-offset-y: -118px
+$glass-white-width: 17px
+$glass-white-height: 15px
+$glass-white-total-width: 178px
+$glass-white-total-height: 147px
+$glass-white-image: '../img/sprite.png'
+$glass-white: (30px, 118px, -30px, -118px, 17px, 15px, 178px, 147px, '../img/sprite.png', 'glass-white', )
+$logo-blue-name: 'logo-blue'
+$logo-blue-x: 0px
+$logo-blue-y: 0px
+$logo-blue-offset-x: 0px
+$logo-blue-offset-y: 0px
+$logo-blue-width: 178px
+$logo-blue-height: 47px
+$logo-blue-total-width: 178px
+$logo-blue-total-height: 147px
+$logo-blue-image: '../img/sprite.png'
+$logo-blue: (0px, 0px, 0px, 0px, 178px, 47px, 178px, 147px, '../img/sprite.png', 'logo-blue', )
+$logo-white-name: 'logo-white'
+$logo-white-x: 0px
+$logo-white-y: 47px
+$logo-white-offset-x: 0px
+$logo-white-offset-y: -47px
+$logo-white-width: 113px
+$logo-white-height: 71px
+$logo-white-total-width: 178px
+$logo-white-total-height: 147px
+$logo-white-image: '../img/sprite.png'
+$logo-white: (0px, 47px, 0px, -47px, 113px, 71px, 178px, 147px, '../img/sprite.png', 'logo-white', )
+$quotes-name: 'quotes'
+$quotes-x: 113px
+$quotes-y: 47px
+$quotes-offset-x: -113px
+$quotes-offset-y: -47px
+$quotes-width: 54px
+$quotes-height: 47px
+$quotes-total-width: 178px
+$quotes-total-height: 147px
+$quotes-image: '../img/sprite.png'
+$quotes: (113px, 47px, -113px, -47px, 54px, 47px, 178px, 147px, '../img/sprite.png', 'quotes', )
+$spritesheet-width: 178px
+$spritesheet-height: 147px
+$spritesheet-image: '../img/sprite.png'
+$spritesheet-sprites: ($checkbox-checked, $checkbox-default, $down-circle, $down, $glass-black, $glass-white, $logo-blue, $logo-white, $quotes, )
+$spritesheet: (178px, 147px, '../img/sprite.png', $spritesheet-sprites, )
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+
+  Example usage in HTML:
+    `display: block` sprite:
+    <div class="icon-home"></div>
+
+  To change `display` (e.g. `display: inline-block`), we suggest using a common CSS class:
+    // CSS
+    .icon {
+      display: inline-block
+    }
+
+    // HTML
+    <i class="icon icon-home"></i>
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)
+
+
+
+
+
+// @import url('../sprite/sprite')
+@font-face
+	src: url('../fonts/Lora-Italic.ttf')
+	font-family: Lora-Italic
+
+$c1: #000
+$c2: #fff
+$c3: #60a4ff
+$c4: #929292
+$fz: 18px
+$ff1: 'Open Sans', sans-serif
+$ff2: 'Lora-Italic', sans-serif
+
+
+*
+	margin: 0
+	padding: 0
+	// transition: .2s
+
+body
+	font: $fz $ff1
+	color: $c1
+	background: #F3F3F3
+
+html, body, header, article, aside, main, footer, div, h1, h2, h3, h4, h5, h6, button, .show
+	display: block
+
+meta, script, style, .hidden
+	display: none!important
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+h1
+	font-size: 78px
+	font-weight: bold
+	text-transform: uppercase
+h2
+	font-size: 40px
+	font-weight: bold
+h3
+	font-size: 30px
+h4
+	font-size: 22px
+h5
+	font-size: 12px
+h6
+	font-size: 10px
+
+:hover
+	transition: .2s
+
+a
+	color: $c1
+	text-decoration: none
+	&:hover
+		text-decoration: underline
+
+button, input[type="submit"]
+	cursor: pointer
+
+button, input
+	display: block
+	outline: none
+	border: none
+	background: none
+
+ul, ol
+	margin: 5px 0 5px 20px
+
+
+::placeholder
+	color: gray
+
+
+.tal
+	text-align: left
+
+.tac
+	text-align: center
+
+.tar
+	text-align: right
+
+.i, i
+	font-style: italic
+
+.b, b, strong
+	font-weight: bold
+
+.fll
+	float: left
+
+.flr
+	float: right
+
+
+.btn
+	display: inline-block
+	line-height: 52px
+	text-transform: uppercase
+	font-weight: bold
+	height: 50px
+	color: $c2
+	background: $c3
+	border: 1px solid $c3
+	width: 262px
+	&:hover
+		background: $c2
+		text-decoration: none
+		border: 1px solid $c2
+		color: $c1
+.btn.invert
+	background: transparent
+	border: 1px solid $c2
+	&:hover
+		background: $c2
+
+.container
+	position: relative
+	width: 1250px
+	margin: 0 auto
+	padding-left: 15px
+	padding-right: 15px
+
+.row, .clearfix
+	&:before, &:after
+		display: table
+		content: ''
+		box-sizing: border-box
+	&:after
+		clear: both
+.w1 > .col
+	width: 100%
+.w2 > .col
+	width: 50%
+.w3 > .col
+	width: 33.333333333%
+.w4 > .col
+	width: 25%
+.w5 > .col
+	width: 20%
+.w6 > .col
+	width: 16.666666667%
+
+.rotate180
+	transform: rotate(180deg)
+
+
+.col
+	display: block
+	float: left
+	min-height: 1px
+
+.breadcrumbs
+	list-style: none
+	li
+		display: inline
+		&:hover
+			a
+				color: $c3
+		&:after
+			position: relative
+			display: inline-block
+			content: '/'
+			margin-right: 0
+			margin-left: 3px
+		&:last-of-type
+			color: $c3
+			&:after
+				display: none
+
+	li, a
+		font-size: 15px
+		text-transform: uppercase
+		font-weight: bold
+		text-decoration: none
+
+.caret
+	li
+		list-style: none
+		cursor: pointer!important
+	ul
+		display: none
+		
+
+.breadcrumbs, .caret
+	margin-left: 0
+
+nav
+	padding-top: 37px
+	padding-bottom: 47px
+	a
+		display: inline-block
+		color: #070707
+		font-weight: bold
+		margin-right: 38px
+		text-decoration: none!important
+		font-size: 11px
+		font-weight: bold
+		
+		padding: 10px 0
+		border-top: 1px solid transparent
+		border-bottom: 1px solid transparent
+	.select, a:hover
+		border-top: 1px solid $c1
+		border-bottom: 1px solid $c1
+
+button#sticks
+	width: 40px
+	height: 40px
+	display: none
+	span
+		display: block
+		position: relative
+		width: 35px
+		height: 4px
+		background: $c2		
+		margin-left: auto
+		margin-right: auto
+		transition: .5s
+		&:nth-of-type(2)
+			margin: 6px auto
+
+button#sticks.close
+	span
+		&:nth-of-type(1)
+			transform: rotate(135deg)
+		&:nth-of-type(2)
+			display: none
+		&:nth-of-type(3)
+			margin-top: -4px
+			transform: rotate(-135deg)
+header.vloz
+	background-position: top 
+	max-height: 298.75px
+	// height: auto !important
+	min-height: 0
+	background-size: cover
+	h1
+		font-size: 29px
+		margin-bottom: 0!important
+	#banner
+		padding-bottom: 90px
+
+header
+	color: $c2
+	height: 100vh
+	min-height: 660px
+	a
+		color: $c2
+	#panel
+		z-index: 1000000
+		background: url('../img/bg/panel.png') repeat-x
+		height: 110px
+		transition: .5s
+	#panel.fixedMenu
+		z-index: 100000
+		background: #E4E4E4
+		position: fixed
+		width: 100%
+		color: #545454
+		height: 62px
+		left: 0
+		top: 0
+		a
+			color: #545454
+		#logo
+			float: left
+			margin-top: 8px
+		#navigation
+			float: left
+		.hidden
+			display: inline-block!important
+		.caret-menu, .hidden-2
+			display: none!important
+		li
+			margin-right: 55px
+			font-size: 14px
+	#logo
+
+		display: inline-block
+		@include sprite($logo-blue)
+		margin-top: 12px
+		margin-right: 185px
+	#navigation
+		float: right
+		margin: 0
+		li
+			display: inline-block
+			list-style: none
+			text-transform: uppercase
+			font-size: 14px
+			line-height: 65px
+			font-weight: bold
+			margin-right: 70px
+			&:last-of-type
+				margin-right: 0
+		a
+			text-decoration: none
+		.caret-menu:hover
+			i
+				transform: rotate(180deg)
+			ul
+				display: block
+				transition: .3s 
+		ul
+			z-index: 1000
+			position: absolute
+			display: none
+			margin: 0
+			right: 15px
+			text-align: right
+			top: 80%
+			li
+				display: block
+				margin-right: 0
+				line-height: 30px
+		a:hover, .select a
+			color: $c3!important
+		i
+			display: inline-block
+			@include sprite($down)
+			margin-left: 5px
+			transition: .3s 
+
+
+	#banner
+		text-align: center
+		.desc
+			display: block
+			margin-top: 7.5%
+			font-size: 29px
+			font-family: $ff2
+		h1
+			margin: 25px 0 20px
+		
+		.qqq	
+			padding-bottom: 120px
+		
+		.ppp
+			padding-bottom: 473px
+		.icon
+			display: block
+			margin: 0 auto
+			@include sprite($down-circle)
+			background-repeat: no-repeat
+		.btn
+			margin-right: 12px
+			&:last-of-type
+				margin-right: 0
+article
+	background: #F3F3F3
+	#welcom
+		padding-top: 85px
+		padding-bottom: 110px
+		width: 1150px
+		.desc
+			color: #929292
+			font-family: $ff2
+			font-size: 24px
+			margin: 15px 0 35px
+		.one
+			font-size: 30px
+			line-height: 48px
+			width: 535px
+			position: relative
+			font-weight: 300
+			&:after
+				right: -50px
+				top: 5px
+				display: block
+				content: ''
+				position: absolute
+				height: 175px
+				width: 1px
+				background: #E4E4E4
+		.two
+			padding-top: 10px
+			margin-left: 90px
+			width: 520px
+			line-height: 28px
+			color: #404040
+			font-weight: 300
+
+	#services
+		text-align: center
+		*
+			transition: .5s ease-out
+		div > div
+			background: rgba(0,0,0,0.25)
+			height: 100%
+		> div
+			&:hover
+				> div
+					background: rgba(0,0,0,0.6)
+				h2
+					padding-top: 95px
+				a
+					opacity: 1
+					transition-delay: 0.5s
+		.id1, .id2, .id3
+			width: 33.3333333%
+			height: 290px
+			background-repeat: no-repeat
+		.id1
+			background: url('../img/bg/services/1.jpg') no-repeat center
+			background-size: cover
+		.id2
+			background: url('../img/bg/services/2.jpg') no-repeat center
+			background-size: cover
+		.id3
+			background: url('../img/bg/services/3.jpg') no-repeat center
+			background-size: cover
+
+		.id4
+			width: 100%
+			background: url('../img/bg/services/4.jpg') no-repeat bottom
+			background-size: cover
+			height: 190px
+			h2
+				padding-top: 65px
+			&:hover
+				h2
+					padding-top: 35px
+
+
+		h2
+			color: $c2
+			padding-top: 170px
+		a
+			display: inline-block
+			opacity: 0
+			text-transform: uppercase
+			font-size: 14px
+			border-top: 1px solid $c2
+			border-bottom: 1px solid $c2
+			color: $c2
+			padding: 10px 23px
+			font-weight: bold
+			margin-top: 20px
+			&:hover
+				text-decoration: none
+
+	#plus
+		text-align: center
+		padding-top: 100px
+		padding-bottom: 140px
+		h3
+			font-size: 27px
+			font-weight: bold
+			padding-top: 35px
+			padding-bottom: 25px
+		p
+			width: 300px
+			margin: 0 auto
+			color: #404040
+			font-weight: 300
+
+	#projects, #photos
+		margin-bottom: 120px
+		.container
+			width: 1170px
+		.one
+			padding-left: 12px
+			padding-bottom: 115px
+			.desc
+				font-family: $ff2
+				font-size: 24px
+				color: #929292
+				padding-top: 20px
+				display: block
+			p
+				font-weight: 300
+				line-height: 28px
+		.two
+			color: $c2
+			*
+				transition: 1s
+			.w573
+				width: 573px
+				padding-right: 20px
+			.w575
+				width: 575px
+			.mr20
+				margin-right: 20px
+			.block
+				height: 431px
+				&:hover
+					figure
+						background: rgba(0,0,0,0.6)
+
+					figcaption
+						opacity: 1
+
+			.id1
+				background: url('../img/bg/projects/1.jpg')
+				width: 573px
+				height: 882px
+				margin-bottom: 20px
+				.desc
+					margin-top: 360px
+			.id2, .id3
+				height: 431px
+				width: 575px
+			.id2
+				background: url('../img/bg/projects/2.jpg')
+				margin-bottom: 20px
+			.id3
+				background: url('../img/bg/projects/3.jpg')
+				margin-bottom: 20px
+			.id4
+				background: url('../img/bg/projects/4.jpg')
+				height: 412px
+				margin-bottom: 20px
+			.id5
+				background: url('../img/bg/projects/5.jpg')
+				
+			.id6
+				background: url('../img/bg/projects/6.jpg')
+			figure
+				height: calc(100% - 40px)
+				background: rgba(0,0,0,0)
+				padding: 20px
+			
+			figcaption
+				opacity: 0
+				position: relative
+				border: 2px solid $c2
+				padding: 27px
+				height: calc(100% - 54px)
+				transition: 0.3s
+			.desc
+				display: block
+				font-family: $ff2
+				margin-top: 135px
+			a
+				bottom: 27px
+				position: absolute
+				color: $c2
+				text-decoration: none
+				font-size: 14px
+				text-transform: uppercase
+				font-weight: bold
+			h3
+				font-weight: bold
+	
+	#reviews
+		text-align: center
+		padding-top: 135px
+		padding-bottom: 120px
+		.container
+			width: 865px
+			i
+				display: block
+				position: relative
+				margin: 0 auto 45px
+				background: url('../img/icons/quotes.png') no-repeat center
+				width: 93px
+				height: 93px
+				border-radius: 50%
+				border: 8px solid $c1
+		*
+			outline: none
+		p
+			font-family: $ff2
+			font-size: 24px
+			line-height: 48px
+			margin-bottom: 65px
+			color: #404040
+		h4
+			color: $c1
+			font-weight: bold
+			font-size: 22px
+		span
+			font-weight: 300
+			color: #626161
+		.arrows
+			margin: 55px auto 0
+			.slick-arrow
+				display: inline-block!important
+				position: relative
+				margin: 0
+				left: auto
+				width: 23px
+				height: 15px
+				top: 0
+				&:before
+					display: none
+			.slick-prev
+				background: url('../img/icons/left.jpg')
+				&:after
+					content: '/'
+					display: inline-block
+					position: relative
+					height: 15px
+					color: $c1
+					font-size: 18px
+					margin-left: 35px
+					top: 7px
+			.slick-next
+				background: url('../img/icons/right.jpg')
+				position: relative
+				top: 7px
+				margin-right: 25px
+	.w850
+		width: 850px
+		padding-bottom: 125px
+		.block
+			border-bottom: 2px solid #D5D5D5
+			margin-bottom: 80px
+			&:last-of-type
+				margin-bottom: 45px
+			img + h3
+				padding-top: 40px
+			h3
+				font-weight: bold
+				padding-bottom: 15px
+			h5
+				font-size: 18px
+				color: #929292
+				font-family: $ff2 
+			p
+				margin-bottom: 30px
+				margin-top: 18px
+				font-size: 18px
+				color: #404040
+				font-weight: 300
+			a
+				display: inline-block
+				margin-bottom: 30px 
+				font-size: 15px
+				color: #60a4ff
+				font-weight: bold
+
+	#about
+		padding-top: 140px
+		padding-bottom: 110px
+		.top
+			width: 1140px
+			padding-bottom: 100px
+			margin: 0 auto
+			img
+				display: block
+				margin: 0 auto 60px
+			.desc
+				font-family: $ff2
+				font-size: 24px
+				color: #929292
+			p
+				padding-top: 7px
+				font-weight: 300
+				font-size: 18px
+				line-height: 28px
+		.center
+			background: $c3
+			color: $c2
+			padding: 100px 85px 140px
+			h3
+				font-size: 29px
+				font-weight: bold
+				text-transform: uppercase
+			h4
+				font-size: 15px
+				font-weight: bold
+				margin-bottom: 18px
+			h5
+				font-family: $ff2
+				font-size: 18px
+			p
+				line-height: 28px
+			.row
+				margin-bottom: 60px
+			.col
+				&:nth-of-type(1)
+					width: 230px
+					margin-right: 45px
+				&:nth-of-type(2)
+					width: 530px
+					margin-right: 35px
+				&:nth-of-type(3)
+					font-weight: 300
+					font-size: 19px
+					line-height: 27px
+		.bottom
+			width: 1171px
+			margin: -115px auto 0
+			.images
+				text-align: center
+				margin-bottom: 85px
+			h2
+				padding-left: 30px
+			p
+				margin-bottom: 25px
+				padding-left: 15px
+				line-height: 28px
+				font-weight: 300
+			.desc
+				display: block
+				padding-left: 30px
+				font-family: $ff2
+				font-size: 24px
+				color: #929292
+				margin: 15px 0 30px
+			.logo-block
+				margin-top: 110px
+				text-align: center
+				h3
+					font-size: 30px
+					font-weight: bold
+					text-transform: uppercase
+					margin-bottom: 75px
+				img
+					margin-right: 60px
+					&:last-of-type
+						margin-right: 0
+	
+	#projects-page
+		padding-top: 140px
+		padding-bottom: 95px
+		*
+			transition: .3s
+		.container
+			background: $c2
+			padding: 20px 0 60px 20px
+			width: 1241px
+		aside
+			float: left
+			width: 296px
+
+			h3
+				font-size: 18px
+				background: $c3
+				color: $c2
+				font-weight: bold
+				text-align: center
+				height: 64px
+				line-height: 64px
+			h3 + div
+				border: 1px solid #F2F2F2
+				padding: 20px
+				.title
+					display: block
+					font-size: 14px
+					color: #545454
+					font-weight: bold
+					margin-bottom: 20px
+					.gray
+						color: #929292
+				.price
+					.row
+						margin-bottom: 20px
+					.noUi-horizontal, .noUi-base
+						height: 8px!important
+						margin-bottom: 20px
+					.noUi-connect
+						background: #E0E0E0
+						box-shadow: none
+					.noUi-origin
+						.noUi-handle
+							border-radius: 50%
+							width: 20px
+							height: 20px
+							border: none
+							background: $c3
+							box-shadow: none
+							&:before, &:after
+								display: none
+				.carets
+					list-style-type: none
+					margin: 0
+					> li
+						margin-left: -20px
+						margin-right: -20px
+						font-size: 14px
+						font-weight: bold
+						padding: 20px 20px 5px 20px
+						border-top: 1px solid #F2F2F2
+						> a
+							color: #545454
+							text-decoration: none
+							display: block
+							margin-bottom: 15px
+							cursor: pointer
+							i
+								position: relative
+								float: right
+								display: inline-block
+								content: ''
+								background: url(../img/icons/down-black.png)
+								width: 11px
+								height: 6px
+								top: 6px
+								transition: .2s
+						&:last-of-type
+							border-bottom: 1px solid #F2F2F2
+						ul
+							margin: 20px 0 5px
+					.open
+						ul
+							display: block
+				.checkbox
+					width: 21px
+					height: 21px
+					position: relative
+					margin-bottom: 17px
+					input
+						visibility: hidden
+						width: 0
+						height: 0
+						padding: 0
+					input[type=checkbox]:checked + label:after
+						background: url(../img/icons/checkbox-checked.png)
+					label
+						cursor: pointer
+						position: absolute
+						width: 21px
+						height: 21px
+						&:after
+							content: ''
+							position: absolute
+							width: 21px
+							height: 21px
+							border-top: none
+							border-right: none
+							background: url(../img/icons/checkbox-default.png)
+					span
+						display: inline-block
+						margin-left: 30px
+						font-size: 14px
+						color: #545454
+
+				input
+					float: left
+					background: #F2F2F2
+					width: 86px
+					border: 1px solid #D5D5D5
+					border-radius: 2px
+					line-height: 42px
+					padding: 0 10px
+					font-family: $ff1
+					font-size: 16px
+					&:nth-of-type(1)
+						margin-left: 7px
+					&:nth-of-type(2)
+						margin-left: 18px
+					&:focus
+						border: 1px solid $c3
+				.buttons
+					margin: 10px auto 0
+					position: relative
+					padding-bottom: 1px
+					width: 231px
+					.btn
+						display: inline-block
+						line-height: 32px
+						height: 32px
+						width: 106px
+						border-radius: 2px
+						border: 1px solid $c3
+						background: $c2
+						color: $c3
+						font-size: 14px
+						font-weight: bold
+						&:hover
+							color: $c2
+							background: $c3
+							border: 1px solid $c3
+					.invert
+						color: #aaaaaa
+						border: 1px solid #aaaaaa
+						margin-left: 15px
+				.info
+					background: #2D568B
+					color: $c2
+					margin-top: 25px
+					margin-left: -20px
+					margin-right: -20px
+					text-align: center
+					padding: 0 20px
+					line-height: 38px
+					text-transform: uppercase
+					font-size: 14px
+					font-weight: bold
+
+		section
+			float: left
+			width: 945px
+			h2
+				padding-left: 40px
+			nav
+				margin-top: 10px
+				padding: 7px 50px
+				background: #F3F3F3
+				font-size: 11px
+			.row
+				margin: 25px 20px
+				border-left: 1px solid #E9E9E9
+				border-top: 1px solid #E9E9E9
+				border-radius: 1px
+				.col
+					padding: 25px 20px
+					border-bottom: 1px solid #E9E9E9
+					border-right: 1px solid #E9E9E9
+					text-align: center
+					*
+						display: block
+						margin-left: auto
+						margin-right: auto
+					img
+						margin-bottom: 35px
+					h5
+						font-size: 16px
+						font-weight: bold
+						width: 230px
+						color: $c3
+						margin-bottom: 10px
+					var, span
+						display: inline-block
+						font-style: normal
+						font-weight: bold
+						font-size: 20px
+					a
+						margin-top: 15px
+						width: 200px
+						line-height: 38px
+						height: 38px
+						border: 1px solid $c3
+						&:hover
+							color: $c3
+
+	#photos
+		margin-bottom: 100px
+		padding-top: 140px
+		.icon
+			position: relative
+			width: 61px
+			height: 61px
+			background-image: url("../img/icons/glass-white.png")
+			background-repeat: no-repeat
+			background-position: center
+			border: 3px solid $c2
+			border-radius: 50%
+			margin: 0 auto
+			top: 40%
+			cursor: pointer
+			&:hover
+				background-image: url("../img/icons/glass-black.png")
+				background-color: $c2
+		h2
+			font-size: 28px
+		.id1
+			.icon
+				top: 45%
+	#others
+		width: 1170px
+		padding-bottom: 125px
+		h3
+			font-size: 28px
+			font-weight: bold
+			margin-bottom: 30px
+			padding-left: 15px
+		a
+			display: inline-block
+			margin-right: 16px
+			&:nth-of-type(3)
+				margin-right: 0
+		.btn
+			display: block
+			margin: 70px auto 0!important
+			height: 45px
+			line-height: 45px
+			text-align: center
+
+			
+footer.vloz
+	padding-top: 110px
+	background-position: center bottom
+	background-size: cover
+footer
+	background: url('../img/bg/footer.jpg') top center no-repeat
+	background-size: cover
+	padding-top: 60px
+	color: $c2
+	.logo
+		display: block
+		@include sprite($logo-white)
+		margin: 0 auto
+	.top
+		text-align: center
+		width: 545px
+		margin: 0 auto 105px
+		h2
+			font-size: 27px
+			margin: 40px auto 25px
+
+		p
+			font-family: $ff2
+			font-size: 24px
+			text-align: left
+			line-height: 38px
+			margin-bottom: 45px
+	.bottom
+		padding-left: 85px
+		h4
+			font-size: 22px
+			font-weight: bold
+			margin-bottom: 25px
+		p
+			font-weight: 300
+			margin-bottom: 20px
+			font-size: 18px
+			&:last-of-type
+				margin-bottom: 35px
+		#copy
+			padding-top: 20px
+			padding-bottom: 20px
+			border-top: 1px solid #C0C0C0
+			font-size: 14px
+			font-weight: 300
+			color: #C0C0C0
+			width: 450px

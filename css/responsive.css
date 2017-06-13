@@ -1,0 +1,333 @@
+@media screen and (max-width: 1300px) {
+  .container, article #about .top, article #about .bottom, article #projects-page .container {
+    width: 1100px; }
+  article #services h2 {
+    word-spacing: 100px;
+    padding-top: 120px; }
+  article #services .id4 h2 {
+    word-spacing: normal; }
+  article #about .center .col:nth-of-type(2) {
+    width: 400px; }
+  article #about .bottom .images img {
+    width: 30%; }
+  article #about .bottom .logo-block img {
+    margin-right: 200px; }
+    article #about .bottom .logo-block img:nth-of-type(2) {
+      margin-right: 0; }
+  article #projects-page section {
+    width: 804px !important; }
+    article #projects-page section .row .col {
+      width: 44.6%; }
+    article #projects-page section nav {
+      text-align: center; }
+      article #projects-page section nav a {
+        margin-bottom: 10px; } }
+
+@media screen and (max-width: 1220px) {
+  .container, article #about .top, article #about .bottom, article #projects-page .container {
+    width: 1000px !important; }
+  article .w850 {
+    width: 850px !important; }
+  header #panel.fixedMenu #logo {
+    margin-right: 0; }
+  header #panel.fixedMenu #navigation {
+    float: right; }
+  article #welcom .one {
+    width: 47%; }
+    article #welcom .one:after {
+      right: -20px; }
+  article #welcom .two {
+    float: right;
+    width: 47%;
+    margin-left: 0; }
+  article #projects .one p, article #photos .one p {
+    padding-left: 30px; }
+  article #projects .two .w573, article #projects .two .w575, article #photos .two .w573, article #photos .two .w575 {
+    width: 49% !important;
+    height: auto; }
+  article #projects .two .block, article #photos .two .block {
+    width: auto;
+    height: 431px; }
+  article #projects .two .id1, article #photos .two .id1 {
+    width: auto;
+    height: 882px; }
+  article #plus br.hidden {
+    display: block !important; }
+  article #reviews {
+    padding-top: 0; }
+  article #about .center .col:nth-of-type(2) {
+    width: 350px; }
+  article #others {
+    margin: 0 auto;
+    text-align: center; }
+    article #others a {
+      width: 28%;
+      margin-right: 2%; }
+    article #others img {
+      width: 100%; }
+  article #projects-page section {
+    width: 704px !important; }
+    article #projects-page section .row .col {
+      width: 43.6%; } }
+
+@media screen and (max-width: 1050px) {
+  .container, article #about .top, article #about .bottom, article #projects-page .container {
+    width: 900px !important; }
+  article .w850 {
+    width: 700px !important; }
+    article .w850 img {
+      width: 100%; }
+    article .w850 h3 {
+      padding-top: 10px !important; }
+  #about .top img {
+    width: 100%; }
+  #about .center .col {
+    width: 100% !important; }
+    #about .center .col:nth-of-type(1) {
+      margin-bottom: 10px; }
+  article #projects-page section {
+    width: 604px !important; }
+    article #projects-page section .row .col {
+      width: 46.2%;
+      padding: 10px; }
+  #photos .two .w573 {
+    padding-right: 18px !important; }
+  #photos .two .mr20 {
+    margin-right: 18px !important;
+    margin-bottom: 20px; }
+  #projects .two .w573, #photos .two .w573 {
+    padding-right: 18px !important; }
+  #projects .two .mr20, #photos .two .mr20 {
+    margin-right: 18px !important;
+    margin-bottom: 20px; }
+  #projects .two .col, #photos .two .col {
+    width: 46.2%; }
+  #projects .two .w1 .col, #photos .two .w1 .col {
+    width: 100% !important; } }
+
+@media screen and (max-width: 950px) {
+  .container, article #about .top, article #about .bottom {
+    width: 730px !important; }
+  header #navigation li {
+    margin-right: 25px; }
+  header #panel.fixedMenu li {
+    margin-right: 15px; }
+  article #services div > div {
+    background: rgba(0, 0, 0, 0.6); }
+    article #services div > div h2 {
+      padding-top: 70px !important; }
+    article #services div > div a {
+      opacity: 1;
+      display: inline-block; }
+  article #services .id4 h2 {
+    padding-top: 45px !important; }
+  article #plus .col {
+    margin-bottom: 40px; }
+    article #plus .col:nth-of-type(1), article #plus .col:nth-of-type(2) {
+      width: 50%; }
+    article #plus .col:nth-of-type(3) {
+      width: 100%; }
+  article #projects .two .w573, article #projects .two .w575, article #photos .two .w573, article #photos .two .w575 {
+    width: 48.63% !important; }
+  article #projects .two figure, article #photos .two figure {
+    display: block !important; }
+  article #projects-page .container {
+    width: 100% !important;
+    padding: 0; }
+  article #projects-page aside {
+    float: none;
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin-right: 0;
+    margin: 0 auto; }
+  article #projects-page section {
+    width: -webkit-calc(100% - 20px) !important;
+    width: calc(100% - 20px) !important; }
+    article #projects-page section .col {
+      width: 47.498% !important; }
+    article #projects-page section h2 {
+      text-align: center;
+      margin: 20px 0 30px; }
+    article #projects-page section .col {
+      width: 97% !important; }
+  footer .bottom #copy {
+    color: #fff; } }
+
+@media screen and (max-width: 780px) {
+  .w2 > .col {
+    width: 100%; }
+  .container, article #about .top, article #about .bottom, article .w850 {
+    width: 95% !important;
+    padding-left: 2.5%;
+    padding-right: 2.5%; }
+  article .w850 {
+    padding-bottom: 20px; }
+    article .w850 h3 {
+      font-size: 22px; }
+  article #photos .icon {
+    top: 20% !important; }
+  nav {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto; }
+    nav a {
+      display: block;
+      margin-bottom: 5px;
+      margin-right: 0; }
+  header #panel {
+    background: #000;
+    height: 70px; }
+  header #panel.fixedMenu #navigation {
+    position: fixed;
+    top: 62px; }
+    header #panel.fixedMenu #navigation li {
+      display: block !important; }
+    header #panel.fixedMenu #navigation .hidden {
+      display: none !important; }
+  header #navigation {
+    display: none;
+    z-index: 10000000;
+    position: absolute;
+    top: 70px;
+    background: #fff;
+    width: 100%;
+    color: #fff;
+    left: 0;
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+    padding-left: 20px;
+    padding-right: 20px; }
+    header #navigation a {
+      color: #000;
+      position: relative; }
+    header #navigation li, header #navigation ul {
+      display: block; }
+    header #navigation li {
+      line-height: 40px; }
+    header #navigation ul {
+      position: relative;
+      text-align: left;
+      width: -webkit-calc(100% - 40px);
+      width: calc(100% - 40px);
+      right: auto; }
+      header #navigation ul li {
+        line-height: 40px !important; }
+  header button#sticks {
+    display: block;
+    float: right;
+    margin-top: 10px; }
+  header .fixedMenu button#sticks span {
+    background: #000; }
+  article #welcom .col {
+    width: 99%; }
+  article #welcom .one:after {
+    display: none; }
+  article #projects .two .w573, article #projects .two .w575, article #projects .two .w1, article #photos .two .w573, article #photos .two .w575, article #photos .two .w1 {
+    width: 100% !important;
+    padding-right: 0 !important; }
+  article #projects .block, article #photos .block {
+    height: 200px !important;
+    max-width: 500px;
+    margin: 0 auto; }
+    article #projects .block .desc, article #photos .block .desc {
+      margin-top: 0 !important; }
+    article #projects .block a, article #photos .block a {
+      left: auto;
+      right: 25px; }
+  article #photos .one .desc {
+    font-size: 20px;
+    margin-bottom: 20px; }
+  article #photos .one p {
+    padding-left: 0; }
+  article #photos .two .w575, article #photos .two .w573 {
+    padding-right: 0 !important; }
+  article #about .top .desc {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0; }
+    article #about .top .desc br {
+      display: none; }
+  article #about .center {
+    padding: 20px; }
+  article #about .bottom {
+    margin-top: 40px; }
+    article #about .bottom .images {
+      display: none; }
+    article #about .bottom h2, article #about .bottom .desc, article #about .bottom p {
+      padding-left: 0; }
+    article #about .bottom .logo-block img {
+      display: block;
+      margin: 0 auto 20px !important; }
+  article #services .col {
+    width: 100%;
+    height: 190px; }
+    article #services .col h2 {
+      word-spacing: normal;
+      padding-top: 45px !important; }
+  article #plus {
+    padding-bottom: 0; }
+  article #plus .col, article #projects .col {
+    width: 99% !important; }
+  article #plus .block, article #projects .block {
+    margin-bottom: 20px; }
+  article #projects .desc {
+    margin-bottom: 20px; }
+  article #projects .one {
+    padding-bottom: 20px; } }
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 30px; }
+  header #logo {
+    margin-right: 0; }
+  header #banner h1 {
+    font-size: 50px; }
+  header #banner .btn {
+    display: block;
+    margin: 30px auto !important; }
+  article #welcom .one {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 20px; }
+  article #reviews p br {
+    display: none; }
+  article #projects .two .block {
+    height: 300px !important; }
+  article #projects .two .w573, article #projects .two .w575 {
+    padding-right: 0; }
+  footer .top {
+    width: auto; }
+  footer .bottom {
+    padding-left: 0; }
+  footer #copy {
+    width: auto !important; } }
+
+@media screen and (max-width: 500px) {
+  article #others {
+    padding-bottom: 20px; }
+    article #others a {
+      width: 100%;
+      margin-bottom: 20px; } }
+
+@media screen and (max-width: 440px) {
+  article #services .id4 h2 {
+    padding-top: 20px !important; } }
+
+@media screen and (max-width: 410px) {
+  article #projects-page section {
+    width: 95% !important; }
+    article #projects-page section .row {
+      margin: 0; }
+    article #projects-page section .col {
+      padding: 0;
+      margin: 0 auto;
+      border-right: 0 !important; } }
+
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 28px !important; }
+  h2 {
+    font-size: 22px !important; }
+  article #projects .two a, article #photos .two a {
+    bottom: 10px;
+    right: 10px; } }
